@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "alcootas",
+  "info": {
+    "singularName": "alcoota",
+    "pluralName": "alcootas",
+    "displayName": "Alcoota"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Content": {
+      "type": "blocks"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

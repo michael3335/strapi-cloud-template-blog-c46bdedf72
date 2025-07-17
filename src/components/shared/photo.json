@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_photos",
+  "info": {
+    "displayName": "Photo",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "commentary": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

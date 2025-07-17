@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * about controller
+ * alcoota controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::about.about');
+module.exports = createCoreController('api::alcoota.alcoota');

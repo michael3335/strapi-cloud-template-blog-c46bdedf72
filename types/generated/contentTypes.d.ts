@@ -427,6 +427,38 @@ export interface ApiAlcootaAlcoota extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
+  collectionName: 'globals';
+  info: {
+    displayName: 'Global';
+    pluralName: 'globals';
+    singularName: 'global';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerContact: Schema.Attribute.RichText;
+    footerText: Schema.Attribute.Text;
+    IACLogo: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global.global'
+    > &
+      Schema.Attribute.Private;
+    logoDark: Schema.Attribute.Media<'images'>;
+    logoLight: Schema.Attribute.Media<'images'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -990,6 +1022,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::alcoota.alcoota': ApiAlcootaAlcoota;
+      'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::photo.photo': ApiPhotoPhoto;
       'plugin::content-releases.release': PluginContentReleasesRelease;
